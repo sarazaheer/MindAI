@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,600;1,600&display=swap");
+* {
+  font-family: Outfit;
+}
+.primary {
+  color: #08528c;
+}
+.bg-primary {
+  background-color: #08528c;
+}
+::-webkit-scrollbar {
+  @apply hidden;
+}
+/* Add these styles to your index.css or equivalent */
+:root {
+  --mindai-primary: #08528c;
+  --mindai-bg: #fdfdff; /* Slightly warmer white for eye comfort */
+}
+
+/* Make message bubbles more organic */
+.message-bubble-user {
+  border-radius: 20px 20px 4px 20px !important;
+  background-color: var(--mindai-primary) !important;
+}
+
+.message-bubble-bot {
+  border-radius: 20px 20px 20px 4px !important;
+  background-color: #ffffff !important;
+  border: 1px solid #eef2f6 !important;
+}
+
+/* Softer scrollbar for the chat */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
